@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from analytics.q_matrix_calculation import calc_s_0_matrix
+from analytics.q_matrix_calculation import calc_s_0_matrix, calculate_q_0_1_matrix
 
 
 @pytest.mark.parametrize('s_matrix,result', [
@@ -15,3 +15,4 @@ def test_s_0_matrix_calculation(s_matrix, result):
 
     # 3 rows and 1 columns
     assert np.array_equal(result, s_0_matrix)
+
