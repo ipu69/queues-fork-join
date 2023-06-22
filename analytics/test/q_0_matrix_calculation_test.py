@@ -28,3 +28,4 @@ def test(buffer_size, ph2_size, map_size, ph1):
     )
 
     assert result.shape[0] == result.shape[1]
+
