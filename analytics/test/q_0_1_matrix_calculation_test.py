@@ -79,3 +79,13 @@ def test(buffer_size, d1_matrix, beta_vectors):
             block,
             result_block
         )
+
+    # check that others blocks are zeros
+    result[0:w, w * ph1_size:w * ph1_size + w * ph1_size * ph2_size] = 0
+
+    for i in range(buffer_size - 1):
+        result[ w + i * (w * ph2_size):w + (i + 1) * (w * ph2_size),
+                w*ph1_size + w*(i + 1)*ph1_size*ph2_size:w*ph1_size + w*(i + 2)*ph1_size*ph2_size
+            ] = 0
+
+    assert np.all(result == 0)

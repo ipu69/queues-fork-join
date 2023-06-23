@@ -50,11 +50,29 @@ def test(buffer_size, ph2_size, map_size, s1_matrix):
 
     for i in range(buffer_size):
         # assert other blocks
+        s_1_0_shape = s_1_0_matrix.shape[0]
+
         assert np.array_equal(
             main_block,
             result[
-                map_size * s_1_0_matrix.shape[0] + i * map_size * s_1_0_matrix.shape[0] * ph2_size:map_size * s_1_0_matrix.shape[0] + (i+1) * map_size * s_1_0_matrix.shape[0] * ph2_size,
+                map_size * s_1_0_shape + i * map_size * s_1_0_shape * ph2_size:map_size * s_1_0_shape + (i+1) * map_size * s_1_0_shape * ph2_size,
                 map_size + i * map_size * ph2_size:map_size + (i + 1) * map_size * ph2_size,
 
             ]
         )
+
+    # move to zeros all not zeros elements
+
+    result[0:map_size * s_1_0_matrix.shape[0], 0:map_size] = 0
+
+    for i in range(buffer_size):
+        # assert other blocks
+        s_1_0_shape = s_1_0_matrix.shape[0]
+        result[
+            map_size * s_1_0_shape + i * map_size * s_1_0_shape * ph2_size:map_size * s_1_0_shape + (
+                        i + 1) * map_size * s_1_0_shape * ph2_size,
+            map_size + i * map_size * ph2_size:map_size + (i + 1) * map_size * ph2_size,
+
+            ] = 0
+
+    assert np.all(result == 0)

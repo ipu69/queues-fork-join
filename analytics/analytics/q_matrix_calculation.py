@@ -119,16 +119,24 @@ def calculate_q_1_matrix(buffer_size: int,
 
 def calculate_q_2_matrix(buffer_size: int,
                          ph1_size: int,
-                         ph2_size: int,
                          d1_matrix: np.ndarray,
                          beta_2_vector: np.ndarray,
                          ) -> np.ndarray:
+    w = d1_matrix.shape[0]
 
+    if buffer_size == 0:
+        return np.zeros(
+            (ph1_size * w, ph1_size * w)
+        )
+
+    ph2_size = beta_2_vector.shape[0]
     main_block = kron(d1_matrix, np.eye(ph1_size * ph2_size))
     first_block = kron(d1_matrix, np.eye(ph1_size), beta_2_vector)
 
     return concat_above_diag_blocks(
-        [first_block] + [main_block for i in range(buffer_size - 1)]
+        [first_block] + [main_block for i in range(buffer_size - 1)],
+        first_zero_left_block_width=ph1_size * w,
+        last_zero_block_height=ph1_size * w * ph2_size
     )
 
 
