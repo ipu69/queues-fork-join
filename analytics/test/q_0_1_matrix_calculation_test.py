@@ -13,8 +13,8 @@ from analytics.math_helper import kron
             [3, 4]
         ]),
         (
-            np.array([1, 2]),
-            np.array([3, 4])
+            np.array([[1, 2]]),
+            np.array([[3, 4]])
         )
     ),
     (
@@ -25,8 +25,8 @@ from analytics.math_helper import kron
             [31, 24, 12],
         ]),
         (
-            np.array([11, 2, 13, 14]),
-            np.array([3, 24])
+            np.array([[11, 2, 13, 14]]),
+            np.array([[3, 24]])
         )
     ),
     (
@@ -38,8 +38,8 @@ from analytics.math_helper import kron
             [3, 24, 2, 4]
         ]),
         (
-            np.array([11, 2, 13]),
-            np.array([3, 24, 1, 2, 1, 6])
+            np.array([[11, 2, 13]]),
+            np.array([[3, 24, 1, 2, 1, 6]])
         )
     )
 ])
@@ -50,8 +50,8 @@ def test(buffer_size, d1_matrix, beta_vectors):
     )
 
     w = d1_matrix.shape[1]
-    ph1_size = beta_vectors[0].shape[0]
-    ph2_size = beta_vectors[1].shape[0]
+    ph1_size = beta_vectors[0].shape[1]
+    ph2_size = beta_vectors[1].shape[1]
 
     if buffer_size == 0:
         assert np.array_equal(result, np.zeros((w, ph1_size * w)))

@@ -8,6 +8,10 @@ from analytics.matrix_helper import concat_sub_diag_blocks, \
 def calculate_q_0_0_matrix(buffer_size: int,
                            d_matrices: tuple[np.ndarray, np.ndarray],
                            ph2: tuple[np.ndarray, np.ndarray]) -> np.ndarray:
+
+    if buffer_size == 0:
+        return d_matrices[0]
+
     map_size: int = d_matrices[0].shape[0]
 
     d0_matrix = d_matrices[0]
@@ -21,10 +25,12 @@ def calculate_q_0_0_matrix(buffer_size: int,
 
     last_diag_block = kron_sum(d0_matrix + d1_matrix, s2_matrix)
 
+    main_sub_diag_block = kron(np.eye(map_size), np.dot(_s_0_2, beta2_vector))
+
     return concat_diag_blocks(
         [d0_matrix] + [_kron_matrix for i in range(buffer_size - 1)] + [last_diag_block]
     ) + concat_sub_diag_blocks(
-            [kron(np.eye(map_size), _s_0_2)] + [np.dot(kron(np.eye(map_size), _s_0_2), beta2_vector) for i in range(buffer_size - 1)],
+            [kron(np.eye(map_size), _s_0_2)] + [main_sub_diag_block for i in range(buffer_size - 1)],
             first_zero_above_block_height=d0_matrix.shape[0],
             last_zero_right_block_width=last_diag_block.shape[1]
     )
@@ -40,8 +46,8 @@ def calculate_q_0_1_matrix(buffer_size: int,
     beta_1_vector = beta_vectors[0]
     beta_2_vector = beta_vectors[1]
 
-    ph2_size = beta_2_vector.shape[0]
-    ph1_size = beta_1_vector.shape[0]
+    ph2_size = beta_2_vector.shape[1]
+    ph1_size = beta_1_vector.shape[1]
 
     if buffer_size == 0:
         return np.zeros((w, w*ph1_size))
@@ -81,8 +87,10 @@ def calculate_q_0_matrix(buffer_size: int,
 
     _s_0_1 = calc_s_0_matrix(s1_matrix)
 
-    first_block = kron(np.eye(map_size), _s_0_1)
-    main_block = kron(np.dot(first_block, beta_1_vector), np.eye(ph2_size))
+    multiplication_result = np.dot(_s_0_1, beta_1_vector)
+
+    first_block = kron(np.eye(map_size), multiplication_result)
+    main_block = kron(first_block, np.eye(ph2_size))
 
     return concat_diag_blocks(
         [first_block] + [main_block for i in range(buffer_size)]
@@ -129,7 +137,7 @@ def calculate_q_2_matrix(buffer_size: int,
             (ph1_size * w, ph1_size * w)
         )
 
-    ph2_size = beta_2_vector.shape[0]
+    ph2_size = beta_2_vector.shape[1]
     main_block = kron(d1_matrix, np.eye(ph1_size * ph2_size))
     first_block = kron(d1_matrix, np.eye(ph1_size), beta_2_vector)
 

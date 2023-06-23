@@ -14,7 +14,7 @@ from analytics.math_helper import kron
             [4, 5, 6],
             [7, 8, 9],
         ]),
-        np.array([1, 2])
+        np.array([[1, 2]])
     ),
     (
         0,
@@ -24,7 +24,7 @@ from analytics.math_helper import kron
             [4, 5, 6],
             [7, 8, 9],
         ]),
-        np.array([1, 2])
+        np.array([[1, 2]])
     ),
 ])
 def test(buffer_size: int,
@@ -39,7 +39,7 @@ def test(buffer_size: int,
     )
 
     map_size = d1_matrix.shape[0]
-    ph2_size = beta_2_vector.shape[0]
+    ph2_size = beta_2_vector.shape[1]
 
     assert result.shape[0] == result.shape[1]
 
