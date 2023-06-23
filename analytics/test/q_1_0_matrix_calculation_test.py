@@ -76,3 +76,4 @@ def test(buffer_size, ph2_size, map_size, s1_matrix):
             ] = 0
 
     assert np.all(result == 0)
+
