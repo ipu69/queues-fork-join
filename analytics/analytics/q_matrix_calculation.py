@@ -101,6 +101,9 @@ def calculate_q_1_matrix(buffer_size: int,
                          d_matrices: tuple[np.ndarray, np.ndarray],
                          ph1: tuple[np.ndarray, np.ndarray],
                          ph2: tuple[np.ndarray, np.ndarray]) -> np.ndarray:
+    if buffer_size == 0:
+        return kron_sum(d_matrices[0], ph1[0])
+
     d0_matrix = d_matrices[0]
     d1_matrix = d_matrices[1]
 
@@ -112,16 +115,20 @@ def calculate_q_1_matrix(buffer_size: int,
     s2_matrix = ph2[0]
     beta2_vector = ph2[1]
 
+    ph2_size = s2_matrix.shape[0]
+
     _s_0_1 = calc_s_0_matrix(s1_matrix)
     _s_0_2 = calc_s_0_matrix(s2_matrix)
 
     main_diag_block = kron_sum(d0_matrix, s1_matrix, s2_matrix)
-    main_sub_dig_block = np.multiply(kron(np.eye(map_size*ph1_size), _s_0_2), beta2_vector)
+    main_sub_dig_block = kron(np.eye(map_size*ph1_size), np.dot(_s_0_2, beta2_vector))
 
     return concat_diag_blocks(
-        [kron_sum(d0_matrix, _s_0_1)] + [main_diag_block for i in range(buffer_size - 1)] + [kron_sum(d0_matrix + d1_matrix, s1_matrix, s2_matrix)]
+            [kron_sum(d0_matrix, s1_matrix)] + [main_diag_block for i in range(buffer_size - 1)] + [kron_sum(d0_matrix + d1_matrix, s1_matrix, s2_matrix)]
     ) + concat_sub_diag_blocks(
-        [kron(np.eye(map_size*ph1_size), _s_0_2)] + [main_sub_dig_block for i in range(buffer_size - 1)]
+            [kron(np.eye(map_size*ph1_size), _s_0_2)] + [main_sub_dig_block for i in range(buffer_size - 1)],
+            first_zero_above_block_height=map_size * ph1_size,
+            last_zero_right_block_width=map_size * ph1_size * ph2_size
     )
 
 
