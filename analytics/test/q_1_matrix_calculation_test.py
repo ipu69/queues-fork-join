@@ -39,38 +39,6 @@ from analytics.math_helper import kron_sum, kron
         )
     ),
     (
-        0,
-        (
-            np.array([
-                [1, 2],
-                [3, 4]
-            ]),
-            np.array([
-                [5, 6],
-                [7, 8]
-            ])
-        ),
-        (
-            np.array([
-                [1, 2],
-                [3, 4]
-            ]),
-            np.array([
-                [5, 6],
-            ])
-        ),
-        (
-            np.array([
-                [5, 6, 1],
-                [7, 8, 1],
-                [7, 1, 1]
-            ]),
-            np.array([
-                [9, 10, 11],
-            ])
-        )
-    ),
-    (
         1,
         (
             np.array([

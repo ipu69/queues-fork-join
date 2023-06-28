@@ -12,7 +12,7 @@ def resolve_matrix_square_equation(a: np.ndarray, b: np.ndarray, c: np.ndarray, 
 
     inverse_b_matrix = np.linalg.inv(-b)
 
-    while np.linalg.norm(current - prev) >= eps and iterations <= 10_000_000:
+    while np.linalg.norm(current - prev) >= eps and iterations <= 5_000_000:
         iterations += 1
 
         current = np.dot(c + np.dot(np.dot(prev, prev), a), inverse_b_matrix)
@@ -52,3 +52,33 @@ def resolve_p_0_and_p_1(
     )
 
     return solution[0:q_0_0.shape[0]], solution[q_0_0.shape[0]:]
+
+
+def calculate_p_i_vector(p1_vector: np.ndarray, r: np.ndarray, i: int) -> np.ndarray:
+    return np.dot(p1_vector, np.linalg.matrix_power(i))
+
+
+def calculate_p_i_by_vector(pi_vector: np.ndarray) -> float:
+    return np.sum(pi_vector)
+
+
+def calculate_p_i(p1_vector: np.ndarray, r: np.ndarray, i: int) -> float:
+    return calculate_p_i_by_vector(
+        calculate_p_i_vector(p1_vector, r, i)
+    )
+
+
+def calculate_p_0_0():
+    pass
+
+
+def calculate_p_0_j():
+    pass
+
+
+def calculate_p_i_0():
+    pass
+
+
+def calculate_p_i_j():
+    pass

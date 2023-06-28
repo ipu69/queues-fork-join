@@ -16,16 +16,6 @@ from analytics.math_helper import kron
         ]),
         np.array([[1, 2]])
     ),
-    (
-        0,
-        12,
-        np.array([
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 9],
-        ]),
-        np.array([[1, 2]])
-    ),
 ])
 def test(buffer_size: int,
          ph1_size: int,

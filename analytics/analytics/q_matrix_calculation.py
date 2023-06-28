@@ -9,8 +9,7 @@ def calculate_q_0_0_matrix(buffer_size: int,
                            d_matrices: tuple[np.ndarray, np.ndarray],
                            ph2: tuple[np.ndarray, np.ndarray]) -> np.ndarray:
 
-    if buffer_size == 0:
-        return d_matrices[0]
+    assert buffer_size > 0
 
     map_size: int = d_matrices[0].shape[0]
 
@@ -41,6 +40,8 @@ def calculate_q_0_1_matrix(buffer_size: int,
                            d1_matrix: np.ndarray,
                            beta_vectors: tuple[np.ndarray, np.ndarray],
                            ) -> np.ndarray:
+    assert buffer_size > 0
+
     w = d1_matrix.shape[0]
 
     beta_1_vector = beta_vectors[0]
@@ -48,9 +49,6 @@ def calculate_q_0_1_matrix(buffer_size: int,
 
     ph2_size = beta_2_vector.shape[1]
     ph1_size = beta_1_vector.shape[1]
-
-    if buffer_size == 0:
-        return np.zeros((w, w*ph1_size))
 
     first_block = kron(d1_matrix, beta_1_vector, beta_2_vector)
     main_block = kron(d1_matrix, beta_1_vector, np.eye(ph2_size))
@@ -101,8 +99,8 @@ def calculate_q_1_matrix(buffer_size: int,
                          d_matrices: tuple[np.ndarray, np.ndarray],
                          ph1: tuple[np.ndarray, np.ndarray],
                          ph2: tuple[np.ndarray, np.ndarray]) -> np.ndarray:
-    if buffer_size == 0:
-        return kron_sum(d_matrices[0], ph1[0])
+
+    assert buffer_size > 0
 
     d0_matrix = d_matrices[0]
     d1_matrix = d_matrices[1]
@@ -139,10 +137,7 @@ def calculate_q_2_matrix(buffer_size: int,
                          ) -> np.ndarray:
     w = d1_matrix.shape[0]
 
-    if buffer_size == 0:
-        return np.zeros(
-            (ph1_size * w, ph1_size * w)
-        )
+    assert buffer_size > 0
 
     ph2_size = beta_2_vector.shape[1]
     main_block = kron(d1_matrix, np.eye(ph1_size * ph2_size))
@@ -156,4 +151,4 @@ def calculate_q_2_matrix(buffer_size: int,
 
 
 def calc_s_0_matrix(s_matrix: np.ndarray) -> np.ndarray:
-    return np.sum(s_matrix, axis=1).reshape(s_matrix.shape[0], 1)
+    return -np.sum(s_matrix, axis=1).reshape(s_matrix.shape[0], 1)

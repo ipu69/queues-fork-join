@@ -29,19 +29,6 @@ from analytics.math_helper import kron
             np.array([[3, 24]])
         )
     ),
-    (
-        0,
-        np.array([
-            [50, 22, 10, 15],
-            [33, 14, 12, 1],
-            [31, 24, 12, 4],
-            [3, 24, 2, 4]
-        ]),
-        (
-            np.array([[11, 2, 13]]),
-            np.array([[3, 24, 1, 2, 1, 6]])
-        )
-    )
 ])
 def test(buffer_size, d1_matrix, beta_vectors):
     result = calculate_q_0_1_matrix(buffer_size=buffer_size,

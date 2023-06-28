@@ -18,18 +18,6 @@ from analytics.math_helper import kron
             np.array([[1, 2]])
         )
     ),
-    (
-        0,
-        2,
-        2,
-        (
-            np.array([
-                [1, 2],
-                [3, 4]
-            ]),
-            np.array([[1, 2]])
-        )
-    )
 ])
 def test(buffer_size, ph2_size, map_size, ph1):
     result = calculate_q_0_matrix(

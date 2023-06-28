@@ -16,15 +16,6 @@ from analytics.math_helper import kron
             [7, 8, 9],
         ])
     ),
-    (
-        0,
-        4,
-        7,
-        np.array([
-            [1, 2],
-            [4, 5],
-        ])
-    ),
 ])
 def test(buffer_size, ph2_size, map_size, s1_matrix):
     result = calculate_q_1_0_matrix(

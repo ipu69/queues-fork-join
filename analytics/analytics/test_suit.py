@@ -11,4 +11,4 @@ ph = (
     np.array([[1, 0]])
 )
 
-buffer_size = 3
+buffer_size = 5

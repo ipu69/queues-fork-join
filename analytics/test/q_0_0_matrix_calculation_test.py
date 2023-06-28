@@ -48,26 +48,6 @@ from analytics.math_helper import kron, kron_sum
             np.array([[1, 62, 3]])
         )
     ),
-    (
-        0,
-        (
-            np.array([
-                [1, 2],
-                [3, 4]
-            ]),
-            np.array([
-                [5, 6],
-                [7, 8]
-            ])
-        ),
-        (
-            np.array([
-                [1, 2],
-                [4, 58],
-            ]),
-            np.array([[4, 3]])
-        )
-    )
 ])
 def test(buffer_size: int,
          d_matrices: tuple[np.ndarray, np.ndarray],
