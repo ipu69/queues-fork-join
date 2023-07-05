@@ -140,6 +140,7 @@ def calculate_q_2_matrix(buffer_size: int,
     assert buffer_size > 0
 
     ph2_size = beta_2_vector.shape[1]
+
     main_block = kron(d1_matrix, np.eye(ph1_size * ph2_size))
     first_block = kron(d1_matrix, np.eye(ph1_size), beta_2_vector)
 

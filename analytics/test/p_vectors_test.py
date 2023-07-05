@@ -1,0 +1,119 @@
+import numpy as np
+
+import analytics.test_suit as test_suit
+from analytics.ergodicity.ergodicity import get_map_lambda, get_ph_mu, get_y_j, verify_ergodicity
+from analytics.q_matrix_calculation import calc_s_0_matrix
+
+from analytics.solution.distribution import resolve_matrix_square_equation, resolve_p_0_and_p_1, calculate_p_i_vectors, \
+    calculate_p_i_distribution, find_r_matrix
+from analytics import q_matrix_calculation
+
+from analytics.solution.distribution_model import DistributionModel
+from analytics.matrix_helper import concat_diag_blocks, concat_above_diag_blocks, concat_sub_diag_blocks
+
+from analytics.math_helper import kron, kron_sum
+
+
+def test():
+    d_matrices = test_suit.d_matrices
+    ph = test_suit.ph
+    buffer_size = test_suit.buffer_size
+
+    q_0 = q_matrix_calculation.calculate_q_0_matrix(
+        buffer_size,
+        ph[0].shape[0],
+        d_matrices[0].shape[0],
+        ph,
+    )
+
+    q_1 = q_matrix_calculation.calculate_q_1_matrix(
+        buffer_size,
+        d_matrices,
+        ph,
+        ph
+    )
+
+    q_2 = q_matrix_calculation.calculate_q_2_matrix(
+        buffer_size,
+        ph[0].shape[0],
+        d_matrices[1],
+        ph[1],
+    )
+
+    r = find_r_matrix(q_2, q_1, q_0)
+
+
+    q_0_0 = q_matrix_calculation.calculate_q_0_0_matrix(
+        buffer_size,
+        d_matrices,
+        ph
+    )
+
+    q_0_1 = q_matrix_calculation.calculate_q_0_1_matrix(
+        buffer_size,
+        d_matrices[1],
+        (
+            ph[1],
+            ph[1],
+        )
+    )
+
+    q_1_0 = q_matrix_calculation.calculate_q_1_0_matrix(
+        buffer_size,
+        ph[0].shape[0],
+        d_matrices[0].shape[0],
+        ph[0]
+    )
+
+    assert np.allclose(np.sum(
+        np.hstack((
+            q_0_0, q_0_1
+        )),
+        axis=1
+    ), 0)
+
+    assert np.allclose(np.sum(
+        np.hstack((
+            q_1_0, q_1, q_2
+        )),
+        axis=1
+    ), 0)
+
+    assert np.allclose(np.sum(
+        np.hstack((
+            q_0,
+            q_1,
+            q_2
+        )),
+        axis=1
+    ), 0)
+
+    full_generator_part: np.ndarray = concat_diag_blocks([q_0_0, q_1, q_1], additional_right_zeros=q_2.shape[1]) +\
+                          concat_above_diag_blocks([q_0_1, q_2, q_2], first_zero_left_block_width=q_0_0.shape[1]) +\
+                          concat_sub_diag_blocks([q_1_0, q_0], first_zero_above_block_height=q_0_0.shape[0], last_zero_right_block_width=q_1.shape[1]+q_2.shape[1])
+
+    assert np.all(full_generator_part.diagonal() < 0)
+    np.fill_diagonal(full_generator_part, 1)
+    assert np.all(full_generator_part >= 0)
+
+    solution = resolve_p_0_and_p_1(
+        q_0_0,
+        q_1_0,
+        q_0_1,
+        q_1,
+        q_2,
+        r
+    )
+
+    assert min(solution[0]) >= 0
+    assert max(solution[0]) <= 1
+    assert sum(solution[0]) <= 1
+
+
+    assert min(solution[1]) >= 0
+    assert max(solution[1]) <= 1
+    assert sum(solution[1]) <= 1
+
+    assert sum(np.concatenate((solution[0], solution[1]))) <= 1
+
+
