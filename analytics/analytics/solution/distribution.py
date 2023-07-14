@@ -106,17 +106,87 @@ def calculate_p_i_distribution(p_vectors: list[np.ndarray]) -> list:
     return [p.sum() for p in p_vectors]
 
 
-def calculate_p_0_0():
-    pass
+def calculate_p_0_0(p_0_vector: np.ndarray, buffer_size: int, map_size: int, ph2_size: int):
+    return np.dot(
+        p_0_vector,
+        np.concatenate((
+            np.ones(map_size),
+            np.zeros(map_size * buffer_size * ph2_size),
+        ))
+    )
 
 
-def calculate_p_0_j():
-    pass
+def calculate_p_0_j(p_0_vector: np.ndarray, j: int, buffer_size: int, map_size: int, ph2_size: int):
+    return np.dot(
+        p_0_vector,
+        np.concatenate((
+            np.zeros(map_size * (1 + (j - 1) * ph2_size)),
+            np.ones(map_size * ph2_size),
+            np.zeros(map_size * (buffer_size - j) * ph2_size),
+        ))
+    )
 
 
-def calculate_p_i_0():
-    pass
+def calculate_p_i_0(p_i_vector: np.ndarray, buffer_size: int, map_size: int, ph1_size: int, ph2_size: int):
+    return np.dot(
+        p_i_vector,
+        np.concatenate((
+            np.ones(map_size * ph1_size),
+            np.zeros(map_size * buffer_size * ph1_size * ph2_size),
+        ))
+    )
 
 
-def calculate_p_i_j():
-    pass
+def calculate_p_i_j(p_i_vector: np.ndarray, j: int, buffer_size: int, map_size: int, ph1_size: int, ph2_size: int):
+    return np.dot(
+        p_i_vector,
+        np.concatenate((
+            np.zeros(map_size * ph1_size * (1 + (j - 1) * ph2_size)),
+            np.ones(map_size * ph1_size * ph2_size),
+            np.zeros(map_size * ph1_size * (buffer_size - j) * ph2_size),
+        ))
+    )
+
+
+def calculate_p_i_j_distribution(p_vectors: list[np.ndarray], buffer_size: int, map_size: int, ph1_size: int, ph2_size: int) -> list:
+    distribution = []# array of arrays
+
+    for index, pi_vector in enumerate(p_vectors):
+        distribution.append([])
+
+        for j in range(0, buffer_size + 1):
+
+            if index == 0:
+                if j == 0:
+                    current = calculate_p_0_0(pi_vector, buffer_size, map_size, ph2_size)
+                else:
+                    current = calculate_p_0_j(pi_vector, j, buffer_size, map_size, ph2_size)
+            else:
+                if j == 0:
+                    current = calculate_p_i_0(pi_vector, buffer_size, map_size, ph1_size, ph2_size)
+                else:
+                    current = calculate_p_i_j(pi_vector, j, buffer_size, map_size, ph1_size, ph2_size)
+
+            distribution[index].append(current)
+
+    return distribution
+
+
+def calculate_q_j_distribution(p_vectors: list[np.ndarray], buffer_size: int, map_size: int, ph1_size: int, ph2_size: int) -> list:
+    p_i_j_distrib = calculate_p_i_j_distribution(
+        p_vectors,
+        buffer_size,
+        map_size,
+        ph1_size,
+        ph2_size
+    )
+
+    result = []
+
+    for j in range(0, buffer_size + 1):
+        current = 0
+        for p_i_j in p_i_j_distrib:
+            current += p_i_j[j]
+
+        result.append(current)
+    return result

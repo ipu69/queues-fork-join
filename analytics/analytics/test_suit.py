@@ -13,8 +13,8 @@ d_matrices = (
 )
 
 ph = (
-    np.array([[-30, 30], [0, -30]]),
+    np.array([[-20, 20], [0, -20]]),
     np.array([[0.5, 0.5]])
 )
 
-buffer_size = 1
+buffer_size = 2
