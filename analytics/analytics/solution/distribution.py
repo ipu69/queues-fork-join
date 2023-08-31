@@ -1,14 +1,14 @@
 import numpy as np
+import scipy
 
-
-def resolve_matrix_square_equation(a: np.ndarray, b: np.ndarray, c: np.ndarray, eps=1e-10) -> np.ndarray:
+def resolve_matrix_square_equation(a: np.ndarray, b: np.ndarray, c: np.ndarray, eps=1e-15) -> np.ndarray:
     assert a.shape == b.shape
     assert b.shape == c.shape
 
     iterations = 0
 
-    prev = 0.1 * np.eye(a.shape[0])
-    current = np.ones(a.shape)
+    prev = np.eye(a.shape[0])
+    current = np.zeros(a.shape)
 
     inverse_b_matrix = np.linalg.inv(b)
 
@@ -23,17 +23,19 @@ def resolve_matrix_square_equation(a: np.ndarray, b: np.ndarray, c: np.ndarray, 
 def find_r_matrix(q_2: np.ndarray, q_1: np.ndarray, q_0: np.ndarray) -> np.ndarray:
     g_matrix = find_g_matrix(q_2, q_1, q_0)
 
-    div = np.max(np.abs(-q_1 - np.dot(q_2, g_matrix)))
+    print('g matrix')
+
+    print(g_matrix)
 
     r_matrix = np.dot(
         q_2,
-        np.linalg.inv((-q_1 - np.dot(q_2, g_matrix)) / div) / div
+        np.linalg.inv((-q_1 - np.dot(q_2, g_matrix)))
     )
 
     return r_matrix
 
 
-def find_g_matrix(a: np.ndarray, b: np.ndarray, c: np.ndarray, eps=1e-12) -> np.ndarray:
+def find_g_matrix(a: np.ndarray, b: np.ndarray, c: np.ndarray, eps=1e-15) -> np.ndarray:
     assert a.shape == b.shape
     assert b.shape == c.shape
 
@@ -57,28 +59,26 @@ def resolve_p_0_and_p_1(
         q_1_0: np.ndarray,
         q_0_1: np.ndarray,
         q_1: np.ndarray,
-        q_2: np.ndarray,
+        q_0: np.ndarray,
         r: np.ndarray
 ) -> tuple[np.ndarray, np.ndarray]:
-    p_0_matrix = np.vstack((
-        q_0_0.transpose(),
-        q_0_1.transpose(),
-        np.ones(q_0_0.shape[0])
-    ))
 
-    p_1_matrix = np.vstack((
-        q_1_0.transpose(),
-        (q_1 + np.dot(r, q_2)).transpose(),
-        np.sum(np.linalg.inv(np.eye(r.shape[0]) - r), axis=1)
+    equation_matrix = np.hstack((
+        np.vstack((
+            np.ones((q_0_0.shape[0], 1)),
+            np.sum(np.linalg.inv(np.eye(r.shape[0]) - r), axis=1).reshape((r.shape[0], 1))
+        )),
+        np.vstack((
+            np.hstack((q_0_0, q_0_1)),
+            np.hstack((q_1_0, q_1 + np.dot(r, q_0)))
+        ))
     ))
-
-    equation_matrix = np.hstack((p_0_matrix, p_1_matrix))
 
     solution: np.ndarray = np.linalg.solve(
-        equation_matrix[1:],
+        equation_matrix.transpose()[0:-1],
         np.vstack(
-            (np.zeros((equation_matrix.shape[1] - 1, 1)), np.array([1]))
-        ).flatten()
+            (np.array([1]), np.zeros((equation_matrix.shape[0] - 1, 1)))
+        ).flatten(),
     )
 
     return solution[0:q_0_0.shape[0]].flatten(), solution[q_0_0.shape[0]:].flatten()
@@ -98,8 +98,18 @@ def calculate_p_i(p1_vector: np.ndarray, r: np.ndarray, i: int) -> float:
     )
 
 
-def calculate_p_i_vectors(p1_vector: np.ndarray, r: np.ndarray, max_val=10000) -> list[np.ndarray]:
-    return [calculate_p_i_vector(p1_vector, r, i) for i in range(2, max_val + 1)]
+def calculate_p_i_vectors(p1_vector: np.ndarray, r: np.ndarray, max_val=1000) -> list[np.ndarray]:
+    res = []
+    p_vector = calculate_p_i_vector(p1_vector, r, 2)
+    res.append(p_vector)
+    i = 3
+
+    while np.sum(p_vector) > 1e-7:
+        p_vector = calculate_p_i_vector(p1_vector, r, i)
+        res.append(p_vector)
+        i = i + 1
+
+    return res
 
 
 def calculate_p_i_distribution(p_vectors: list[np.ndarray]) -> list:

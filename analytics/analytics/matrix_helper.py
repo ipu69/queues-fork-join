@@ -11,7 +11,7 @@ def concat_diag_blocks(blocks,
     blocks = [np.array([[1,2], [3,4]]), np.array([[5,6], [7,8]])]
     others params by default:
 
-    return result: np.array([[1,2,0,0],
+    return result.txt: np.array([[1,2,0,0],
                              [3,4,0,0],
                              [0,0,5,6],
                              [0,0,7,8]])
@@ -62,7 +62,7 @@ def concat_sub_diag_blocks(blocks: List[np.ndarray],
     blocks = [np.array([[1,2], [3,4]]), np.array([[5,6], [7,8]])],
     others params by default:
 
-    result = np.array([[0,0,0,0],
+    result.txt = np.array([[0,0,0,0],
                        [1,2,0,0],
                        [3,4,0,0],
                        [0,0,5,6],
@@ -107,7 +107,7 @@ def concat_above_diag_blocks(blocks,
     blocks = [np.array([[1,2], [3,4]]), np.array([[5,6], [7,8]])],
     others params by default:
 
-    return result: np.array([[0,1,2,0,0],
+    return result.txt: np.array([[0,1,2,0,0],
                             [0,3,4,0,0],
                             [0,0,0,5,6],
                             [0,0,0,7,8]])
@@ -150,7 +150,7 @@ def add_zeros_cols_right(matrix: np.ndarray, count_cols: int) -> np.ndarray:
 
     count_cols = 2
 
-    result = |1 2 3 0 0|
+    result.txt = |1 2 3 0 0|
              |4 5 6 0 0|
              |7 8 9 0 0|
 
@@ -180,7 +180,7 @@ def add_zeros_cols_left(matrix, count_cols):
 
     count_cols = 2
 
-    result = |0 0 1 2 3|
+    result.txt = |0 0 1 2 3|
              |0 0 4 5 6|
              |0 0 7 8 9|
 
@@ -211,7 +211,7 @@ def add_zero_rows_down(matrix, rows_count):
 
     count_cols = 2
 
-    result = |1 2 3|
+    result.txt = |1 2 3|
              |4 5 6|
              |7 8 9|
              |0 0 0|
@@ -243,7 +243,7 @@ def add_zero_rows_up(matrix, rows_count):
 
     count_cols = 2
 
-    result =  |0 0 0|
+    result.txt =  |0 0 0|
               |0 0 0|
               |1 2 3]
               |4 5 6|

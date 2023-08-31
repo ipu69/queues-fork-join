@@ -44,8 +44,7 @@ def test():
         ph[1],
     )
 
-    r = find_r_matrix(q_2, q_1, q_0)
-
+    r = resolve_matrix_square_equation(q_0, q_1, q_2)
 
     q_0_0 = q_matrix_calculation.calculate_q_0_0_matrix(
         buffer_size,
@@ -105,7 +104,7 @@ def test():
         q_1_0,
         q_0_1,
         q_1,
-        q_2,
+        q_0,
         r
     )
 
@@ -148,3 +147,9 @@ def test():
     print(q_distribution.distribution)
     print(q_distribution.mean())
     print(loss_prob)
+    print(solution)
+
+    print(np.dot(solution[0], q_0_0) + np.dot(solution[1], q_1_0))
+    print(np.dot(solution[0], q_0_1) + np.dot(solution[1], q_1 + np.dot(r, q_0)))
+    print(1 - (np.sum(p_vectors[0]) + np.sum(np.dot(p_vectors[1], np.linalg.inv(np.eye(r.shape[0]) - r)))))
+

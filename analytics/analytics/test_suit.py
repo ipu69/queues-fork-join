@@ -2,19 +2,13 @@ import numpy as np
 
 
 d_matrices = (
-    np.array([
-        [-8, 1],
-        [1, -11]
-    ]),
-    np.array([
-        [2, 5],
-        [4, 6]
-    ]),
+    np.array([[-2]]),
+    np.array([[2]]),
 )
 
 ph = (
-    np.array([[-20, 20], [0, -20]]),
-    np.array([[0.5, 0.5]])
+    np.array([[-2]]),
+    np.array([[1]])
 )
 
-buffer_size = 2
+buffer_size = 1
