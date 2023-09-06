@@ -1,0 +1,1702 @@
+[
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "2.74",
+      "rate_min": "2.11",
+      "rate_max": "2.47"
+    },
+    "arrival": {
+      "cv": "7.79",
+      "skew": "11.69",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 15,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "23.03",
+      "rate_min": "2.18",
+      "rate_max": "2.81"
+    },
+    "arrival": {
+      "cv": "8.87",
+      "skew": "13.31",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 7,
+    "capacity": 31,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "68.09",
+      "rate_min": "2.56",
+      "rate_max": "2.97"
+    },
+    "arrival": {
+      "cv": "5.73",
+      "skew": "8.58",
+      "rate": "1.00",
+      "lag": "0.25"
+    },
+    "num_servers": 8,
+    "capacity": 1,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "68.54",
+      "rate_min": "2.24",
+      "rate_max": "2.93"
+    },
+    "arrival": {
+      "cv": "5.15",
+      "skew": "7.72",
+      "rate": "1.00",
+      "lag": "0.07"
+    },
+    "num_servers": 7,
+    "capacity": 4,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "77.49",
+      "rate_min": "2.60",
+      "rate_max": "2.60"
+    },
+    "arrival": {
+      "cv": "9.39",
+      "skew": "14.09",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 39,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "32.98",
+      "rate_min": "2.90",
+      "rate_max": "2.95"
+    },
+    "arrival": {
+      "cv": "8.74",
+      "skew": "13.17",
+      "rate": "1.00",
+      "lag": "-0.01"
+    },
+    "num_servers": 4,
+    "capacity": 31,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "53.94",
+      "rate_min": "2.54",
+      "rate_max": "2.88"
+    },
+    "arrival": {
+      "cv": "3.93",
+      "skew": "5.92",
+      "rate": "1.00",
+      "lag": "0.54"
+    },
+    "num_servers": 1,
+    "capacity": 31,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "94.82",
+      "rate_min": "2.32",
+      "rate_max": "2.54"
+    },
+    "arrival": {
+      "cv": "2.76",
+      "skew": "4.17",
+      "rate": "1.00",
+      "lag": "0.29"
+    },
+    "num_servers": 1,
+    "capacity": 16,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "64.43",
+      "rate_min": "2.29",
+      "rate_max": "2.72"
+    },
+    "arrival": {
+      "cv": "4.78",
+      "skew": "7.17",
+      "rate": "1.00",
+      "lag": "0.02"
+    },
+    "num_servers": 5,
+    "capacity": 7,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "10.60",
+      "rate_min": "2.09",
+      "rate_max": "2.67"
+    },
+    "arrival": {
+      "cv": "4.38",
+      "skew": "6.58",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 22,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "5.69",
+      "rate_min": "2.63",
+      "rate_max": "2.87"
+    },
+    "arrival": {
+      "cv": "9.32",
+      "skew": "14.16",
+      "rate": "1.00",
+      "lag": "0.47"
+    },
+    "num_servers": 6,
+    "capacity": 21,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "82.62",
+      "rate_min": "2.26",
+      "rate_max": "2.50"
+    },
+    "arrival": {
+      "cv": "4.64",
+      "skew": "6.94",
+      "rate": "1.00",
+      "lag": "0.56"
+    },
+    "num_servers": 3,
+    "capacity": 18,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "4.17",
+      "rate_min": "2.24",
+      "rate_max": "2.98"
+    },
+    "arrival": {
+      "cv": "6.49",
+      "skew": "9.74",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 6,
+    "capacity": 7,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "44.75",
+      "rate_min": "2.26",
+      "rate_max": "2.27"
+    },
+    "arrival": {
+      "cv": "2.10",
+      "skew": "3.21",
+      "rate": "1.00",
+      "lag": "0.48"
+    },
+    "num_servers": 3,
+    "capacity": 22,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "54.53",
+      "rate_min": "2.17",
+      "rate_max": "2.68"
+    },
+    "arrival": {
+      "cv": "2.38",
+      "skew": "3.61",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 6,
+    "capacity": 28,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "93.66",
+      "rate_min": "2.45",
+      "rate_max": "2.88"
+    },
+    "arrival": {
+      "cv": "7.57",
+      "skew": "11.36",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 18,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "43.41",
+      "rate_min": "2.09",
+      "rate_max": "2.18"
+    },
+    "arrival": {
+      "cv": "9.95",
+      "skew": "15.02",
+      "rate": "1.00",
+      "lag": "0.24"
+    },
+    "num_servers": 1,
+    "capacity": 13,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "2.86",
+      "rate_min": "2.45",
+      "rate_max": "2.93"
+    },
+    "arrival": {
+      "cv": "6.31",
+      "skew": "9.47",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 8,
+    "capacity": 0,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "56.36",
+      "rate_min": "2.03",
+      "rate_max": "2.81"
+    },
+    "arrival": {
+      "cv": "3.39",
+      "skew": "5.10",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 9,
+    "capacity": 8,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "37.99",
+      "rate_min": "2.71",
+      "rate_max": "2.77"
+    },
+    "arrival": {
+      "cv": "8.44",
+      "skew": "12.67",
+      "rate": "1.00",
+      "lag": "-0.01"
+    },
+    "num_servers": 6,
+    "capacity": 19,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "1.88",
+      "rate_min": "2.66",
+      "rate_max": "2.73"
+    },
+    "arrival": {
+      "cv": "2.07",
+      "skew": "3.16",
+      "rate": "1.00",
+      "lag": "-0.08"
+    },
+    "num_servers": 6,
+    "capacity": 10,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "1.58",
+      "rate_min": "2.64",
+      "rate_max": "2.93"
+    },
+    "arrival": {
+      "cv": "1.37",
+      "skew": "2.28",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 10,
+    "capacity": 42,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "71.03",
+      "rate_min": "2.53",
+      "rate_max": "2.58"
+    },
+    "arrival": {
+      "cv": "3.74",
+      "skew": "5.62",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 18,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "50.09",
+      "rate_min": "2.42",
+      "rate_max": "2.42"
+    },
+    "arrival": {
+      "cv": "9.45",
+      "skew": "14.18",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 8,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "82.25",
+      "rate_min": "2.10",
+      "rate_max": "2.55"
+    },
+    "arrival": {
+      "cv": "9.57",
+      "skew": "14.36",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 30,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "23.71",
+      "rate_min": "2.56",
+      "rate_max": "2.58"
+    },
+    "arrival": {
+      "cv": "2.38",
+      "skew": "3.61",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 8,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "75.52",
+      "rate_min": "2.35",
+      "rate_max": "2.56"
+    },
+    "arrival": {
+      "cv": "5.66",
+      "skew": "8.55",
+      "rate": "1.00",
+      "lag": "0.53"
+    },
+    "num_servers": 4,
+    "capacity": 42,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "60.98",
+      "rate_min": "2.14",
+      "rate_max": "2.34"
+    },
+    "arrival": {
+      "cv": "5.45",
+      "skew": "8.22",
+      "rate": "1.00",
+      "lag": "0.61"
+    },
+    "num_servers": 3,
+    "capacity": 24,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "4.75",
+      "rate_min": "2.16",
+      "rate_max": "2.45"
+    },
+    "arrival": {
+      "cv": "2.20",
+      "skew": "3.35",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 3,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "64.58",
+      "rate_min": "2.39",
+      "rate_max": "2.51"
+    },
+    "arrival": {
+      "cv": "3.78",
+      "skew": "5.68",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 4,
+    "capacity": 40,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "3.97",
+      "rate_min": "2.25",
+      "rate_max": "2.64"
+    },
+    "arrival": {
+      "cv": "7.31",
+      "skew": "11.00",
+      "rate": "1.00",
+      "lag": "0.18"
+    },
+    "num_servers": 7,
+    "capacity": 22,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "41.65",
+      "rate_min": "2.38",
+      "rate_max": "2.59"
+    },
+    "arrival": {
+      "cv": "0.71",
+      "skew": "1.41",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 9,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "58.12",
+      "rate_min": "2.09",
+      "rate_max": "2.81"
+    },
+    "arrival": {
+      "cv": "0.87",
+      "skew": "0.96",
+      "rate": "1.00",
+      "lag": "0.35"
+    },
+    "num_servers": 3,
+    "capacity": 12,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "7.13",
+      "rate_min": "2.37",
+      "rate_max": "2.58"
+    },
+    "arrival": {
+      "cv": "4.19",
+      "skew": "6.29",
+      "rate": "1.00",
+      "lag": "-0.04"
+    },
+    "num_servers": 2,
+    "capacity": 44,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "23.42",
+      "rate_min": "2.14",
+      "rate_max": "2.69"
+    },
+    "arrival": {
+      "cv": "5.96",
+      "skew": "8.94",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 18,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "37.27",
+      "rate_min": "2.45",
+      "rate_max": "2.52"
+    },
+    "arrival": {
+      "cv": "4.44",
+      "skew": "6.67",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 10,
+    "capacity": 41,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "30.37",
+      "rate_min": "2.04",
+      "rate_max": "2.80"
+    },
+    "arrival": {
+      "cv": "7.25",
+      "skew": "10.98",
+      "rate": "1.00",
+      "lag": "0.55"
+    },
+    "num_servers": 1,
+    "capacity": 49,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "19.30",
+      "rate_min": "2.14",
+      "rate_max": "2.17"
+    },
+    "arrival": {
+      "cv": "1.56",
+      "skew": "2.96",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 30,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "58.37",
+      "rate_min": "2.01",
+      "rate_max": "2.39"
+    },
+    "arrival": {
+      "cv": "7.43",
+      "skew": "11.16",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 2,
+    "capacity": 31,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "70.78",
+      "rate_min": "2.43",
+      "rate_max": "2.74"
+    },
+    "arrival": {
+      "cv": "6.28",
+      "skew": "9.42",
+      "rate": "1.00",
+      "lag": "-0.02"
+    },
+    "num_servers": 4,
+    "capacity": 21,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "9.36",
+      "rate_min": "2.20",
+      "rate_max": "2.33"
+    },
+    "arrival": {
+      "cv": "8.90",
+      "skew": "13.38",
+      "rate": "1.00",
+      "lag": "-0.01"
+    },
+    "num_servers": 7,
+    "capacity": 41,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "86.50",
+      "rate_min": "2.29",
+      "rate_max": "2.68"
+    },
+    "arrival": {
+      "cv": "6.46",
+      "skew": "9.70",
+      "rate": "1.00",
+      "lag": "-0.02"
+    },
+    "num_servers": 10,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "63.38",
+      "rate_min": "2.62",
+      "rate_max": "2.79"
+    },
+    "arrival": {
+      "cv": "3.84",
+      "skew": "5.77",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 2,
+    "capacity": 37,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "82.37",
+      "rate_min": "2.31",
+      "rate_max": "2.73"
+    },
+    "arrival": {
+      "cv": "2.58",
+      "skew": "3.90",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 6,
+    "capacity": 49,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "21.93",
+      "rate_min": "2.47",
+      "rate_max": "2.64"
+    },
+    "arrival": {
+      "cv": "9.87",
+      "skew": "15.09",
+      "rate": "1.00",
+      "lag": "0.52"
+    },
+    "num_servers": 10,
+    "capacity": 34,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "23.11",
+      "rate_min": "2.07",
+      "rate_max": "2.10"
+    },
+    "arrival": {
+      "cv": "7.74",
+      "skew": "12.29",
+      "rate": "1.00",
+      "lag": "0.61"
+    },
+    "num_servers": 4,
+    "capacity": 12,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "5.95",
+      "rate_min": "2.20",
+      "rate_max": "2.64"
+    },
+    "arrival": {
+      "cv": "4.12",
+      "skew": "6.19",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 7,
+    "capacity": 23,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "3.76",
+      "rate_min": "2.45",
+      "rate_max": "2.79"
+    },
+    "arrival": {
+      "cv": "8.60",
+      "skew": "12.91",
+      "rate": "1.00",
+      "lag": "-0.01"
+    },
+    "num_servers": 4,
+    "capacity": 26,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "13.84",
+      "rate_min": "2.16",
+      "rate_max": "2.16"
+    },
+    "arrival": {
+      "cv": "0.62",
+      "skew": "0.36",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 1,
+    "capacity": 23,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "29.37",
+      "rate_min": "2.09",
+      "rate_max": "2.50"
+    },
+    "arrival": {
+      "cv": "5.79",
+      "skew": "8.68",
+      "rate": "1.00",
+      "lag": "0.29"
+    },
+    "num_servers": 10,
+    "capacity": 5,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "72.42",
+      "rate_min": "2.19",
+      "rate_max": "2.82"
+    },
+    "arrival": {
+      "cv": "6.85",
+      "skew": "10.28",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 2,
+    "capacity": 50,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "50.34",
+      "rate_min": "2.08",
+      "rate_max": "2.70"
+    },
+    "arrival": {
+      "cv": "1.25",
+      "skew": "2.51",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 20,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "99.17",
+      "rate_min": "2.98",
+      "rate_max": "3.00"
+    },
+    "arrival": {
+      "cv": "2.67",
+      "skew": "4.03",
+      "rate": "1.00",
+      "lag": "-0.10"
+    },
+    "num_servers": 5,
+    "capacity": 11,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "46.78",
+      "rate_min": "2.17",
+      "rate_max": "2.22"
+    },
+    "arrival": {
+      "cv": "4.35",
+      "skew": "6.53",
+      "rate": "1.00",
+      "lag": "0.09"
+    },
+    "num_servers": 9,
+    "capacity": 34,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "3.94",
+      "rate_min": "2.03",
+      "rate_max": "2.31"
+    },
+    "arrival": {
+      "cv": "9.77",
+      "skew": "14.66",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 0,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "67.31",
+      "rate_min": "2.08",
+      "rate_max": "2.36"
+    },
+    "arrival": {
+      "cv": "2.70",
+      "skew": "4.08",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 8,
+    "capacity": 40,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "-2.70",
+      "rate_min": "2.00",
+      "rate_max": "2.91"
+    },
+    "arrival": {
+      "cv": "5.79",
+      "skew": "8.69",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 10,
+    "capacity": 32,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "80.39",
+      "rate_min": "2.18",
+      "rate_max": "2.47"
+    },
+    "arrival": {
+      "cv": "7.25",
+      "skew": "10.88",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 17,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "33.15",
+      "rate_min": "2.34",
+      "rate_max": "2.94"
+    },
+    "arrival": {
+      "cv": "7.46",
+      "skew": "11.23",
+      "rate": "1.00",
+      "lag": "0.31"
+    },
+    "num_servers": 2,
+    "capacity": 28,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "87.94",
+      "rate_min": "2.13",
+      "rate_max": "2.52"
+    },
+    "arrival": {
+      "cv": "8.69",
+      "skew": "13.04",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 32,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "91.13",
+      "rate_min": "2.35",
+      "rate_max": "2.53"
+    },
+    "arrival": {
+      "cv": "2.52",
+      "skew": "3.82",
+      "rate": "1.00",
+      "lag": "0.22"
+    },
+    "num_servers": 7,
+    "capacity": 45,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "24.60",
+      "rate_min": "2.10",
+      "rate_max": "2.44"
+    },
+    "arrival": {
+      "cv": "6.71",
+      "skew": "10.09",
+      "rate": "1.00",
+      "lag": "0.17"
+    },
+    "num_servers": 1,
+    "capacity": 34,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "5.60",
+      "rate_min": "2.21",
+      "rate_max": "2.85"
+    },
+    "arrival": {
+      "cv": "1.09",
+      "skew": "2.86",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 2,
+    "capacity": 1,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "-1.07",
+      "rate_min": "2.32",
+      "rate_max": "2.40"
+    },
+    "arrival": {
+      "cv": "8.91",
+      "skew": "13.37",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 30,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "-0.40",
+      "rate_min": "2.03",
+      "rate_max": "2.54"
+    },
+    "arrival": {
+      "cv": "5.32",
+      "skew": "8.03",
+      "rate": "1.00",
+      "lag": "0.52"
+    },
+    "num_servers": 7,
+    "capacity": 27,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "90.99",
+      "rate_min": "2.39",
+      "rate_max": "2.97"
+    },
+    "arrival": {
+      "cv": "5.49",
+      "skew": "8.24",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 10,
+    "capacity": 43,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "19.68",
+      "rate_min": "2.37",
+      "rate_max": "2.84"
+    },
+    "arrival": {
+      "cv": "6.68",
+      "skew": "10.03",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 32,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "27.84",
+      "rate_min": "2.18",
+      "rate_max": "2.80"
+    },
+    "arrival": {
+      "cv": "3.07",
+      "skew": "4.62",
+      "rate": "1.00",
+      "lag": "0.53"
+    },
+    "num_servers": 3,
+    "capacity": 4,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "66.03",
+      "rate_min": "2.55",
+      "rate_max": "2.73"
+    },
+    "arrival": {
+      "cv": "8.55",
+      "skew": "12.83",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 10,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "89.45",
+      "rate_min": "2.36",
+      "rate_max": "2.58"
+    },
+    "arrival": {
+      "cv": "0.71",
+      "skew": "1.41",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 8,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "97.55",
+      "rate_min": "2.21",
+      "rate_max": "2.97"
+    },
+    "arrival": {
+      "cv": "8.14",
+      "skew": "12.27",
+      "rate": "1.00",
+      "lag": "-0.01"
+    },
+    "num_servers": 2,
+    "capacity": 2,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "51.30",
+      "rate_min": "2.66",
+      "rate_max": "2.97"
+    },
+    "arrival": {
+      "cv": "6.43",
+      "skew": "9.66",
+      "rate": "1.00",
+      "lag": "-0.02"
+    },
+    "num_servers": 3,
+    "capacity": 30,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "67.26",
+      "rate_min": "2.29",
+      "rate_max": "2.33"
+    },
+    "arrival": {
+      "cv": "3.80",
+      "skew": "5.71",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 16,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "26.54",
+      "rate_min": "2.60",
+      "rate_max": "2.90"
+    },
+    "arrival": {
+      "cv": "2.98",
+      "skew": "4.49",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 7,
+    "capacity": 16,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "83.81",
+      "rate_min": "2.58",
+      "rate_max": "2.65"
+    },
+    "arrival": {
+      "cv": "3.23",
+      "skew": "4.86",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 38,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "18.44",
+      "rate_min": "2.04",
+      "rate_max": "2.84"
+    },
+    "arrival": {
+      "cv": "0.41",
+      "skew": "0.82",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 12,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "6.65",
+      "rate_min": "2.55",
+      "rate_max": "2.59"
+    },
+    "arrival": {
+      "cv": "3.00",
+      "skew": "4.52",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 26,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "61.58",
+      "rate_min": "2.19",
+      "rate_max": "2.33"
+    },
+    "arrival": {
+      "cv": "8.20",
+      "skew": "12.34",
+      "rate": "1.00",
+      "lag": "0.17"
+    },
+    "num_servers": 8,
+    "capacity": 19,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "69.73",
+      "rate_min": "2.69",
+      "rate_max": "2.87"
+    },
+    "arrival": {
+      "cv": "3.37",
+      "skew": "5.07",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 5,
+    "capacity": 26,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "77.57",
+      "rate_min": "2.27",
+      "rate_max": "3.00"
+    },
+    "arrival": {
+      "cv": "1.57",
+      "skew": "2.81",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 25,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "36.49",
+      "rate_min": "2.25",
+      "rate_max": "2.61"
+    },
+    "arrival": {
+      "cv": "0.94",
+      "skew": "0.61",
+      "rate": "1.00",
+      "lag": "-0.05"
+    },
+    "num_servers": 8,
+    "capacity": 25,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "35.10",
+      "rate_min": "2.37",
+      "rate_max": "2.89"
+    },
+    "arrival": {
+      "cv": "7.00",
+      "skew": "10.50",
+      "rate": "1.00",
+      "lag": "-0.02"
+    },
+    "num_servers": 8,
+    "capacity": 16,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "58.41",
+      "rate_min": "2.05",
+      "rate_max": "2.13"
+    },
+    "arrival": {
+      "cv": "3.55",
+      "skew": "5.33",
+      "rate": "1.00",
+      "lag": "-0.06"
+    },
+    "num_servers": 4,
+    "capacity": 36,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "19.82",
+      "rate_min": "2.62",
+      "rate_max": "2.86"
+    },
+    "arrival": {
+      "cv": "4.62",
+      "skew": "6.94",
+      "rate": "1.00",
+      "lag": "-0.04"
+    },
+    "num_servers": 2,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "88.64",
+      "rate_min": "2.46",
+      "rate_max": "2.53"
+    },
+    "arrival": {
+      "cv": "5.13",
+      "skew": "7.70",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 9,
+    "capacity": 37,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "85.93",
+      "rate_min": "2.36",
+      "rate_max": "2.80"
+    },
+    "arrival": {
+      "cv": "0.79",
+      "skew": "1.33",
+      "rate": "1.00",
+      "lag": "0.16"
+    },
+    "num_servers": 9,
+    "capacity": 6,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "5.68",
+      "rate_min": "2.91",
+      "rate_max": "2.96"
+    },
+    "arrival": {
+      "cv": "2.23",
+      "skew": "3.39",
+      "rate": "1.00",
+      "lag": "-0.10"
+    },
+    "num_servers": 1,
+    "capacity": 12,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "34.24",
+      "rate_min": "2.85",
+      "rate_max": "2.91"
+    },
+    "arrival": {
+      "cv": "8.93",
+      "skew": "13.40",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 8,
+    "capacity": 10,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "12.24",
+      "rate_min": "2.30",
+      "rate_max": "2.49"
+    },
+    "arrival": {
+      "cv": "5.31",
+      "skew": "7.99",
+      "rate": "1.00",
+      "lag": "0.28"
+    },
+    "num_servers": 5,
+    "capacity": 25,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "92.76",
+      "rate_min": "2.46",
+      "rate_max": "2.89"
+    },
+    "arrival": {
+      "cv": "6.25",
+      "skew": "9.37",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 3,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "52.21",
+      "rate_min": "2.32",
+      "rate_max": "2.67"
+    },
+    "arrival": {
+      "cv": "6.57",
+      "skew": "9.86",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 7,
+    "capacity": 42,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "4.31",
+      "rate_min": "2.12",
+      "rate_max": "2.64"
+    },
+    "arrival": {
+      "cv": "1.80",
+      "skew": "2.82",
+      "rate": "1.00",
+      "lag": "0.00"
+    },
+    "num_servers": 3,
+    "capacity": 8,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "29.56",
+      "rate_min": "2.07",
+      "rate_max": "2.27"
+    },
+    "arrival": {
+      "cv": "9.01",
+      "skew": "13.52",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 1,
+    "capacity": 6,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "92.41",
+      "rate_min": "2.31",
+      "rate_max": "2.41"
+    },
+    "arrival": {
+      "cv": "8.50",
+      "skew": "12.75",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 4,
+    "capacity": 0,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "41.58",
+      "rate_min": "2.26",
+      "rate_max": "2.92"
+    },
+    "arrival": {
+      "cv": "0.41",
+      "skew": "0.70",
+      "rate": "1.00",
+      "lag": "0.14"
+    },
+    "num_servers": 2,
+    "capacity": 4,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "84.48",
+      "rate_min": "2.16",
+      "rate_max": "2.40"
+    },
+    "arrival": {
+      "cv": "4.03",
+      "skew": "6.05",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 8,
+    "capacity": 27,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "50.78",
+      "rate_min": "2.36",
+      "rate_max": "2.44"
+    },
+    "arrival": {
+      "cv": "0.78",
+      "skew": "2.45",
+      "rate": "1.00",
+      "lag": "0.13"
+    },
+    "num_servers": 10,
+    "capacity": 22,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "43.49",
+      "rate_min": "2.06",
+      "rate_max": "2.86"
+    },
+    "arrival": {
+      "cv": "7.57",
+      "skew": "11.37",
+      "rate": "1.00",
+      "lag": "-0.01"
+    },
+    "num_servers": 1,
+    "capacity": 21,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "-0.90",
+      "rate_min": "2.75",
+      "rate_max": "2.76"
+    },
+    "arrival": {
+      "cv": "2.70",
+      "skew": "18.03",
+      "rate": "0.20",
+      "lag": "0.62"
+    },
+    "num_servers": 1,
+    "capacity": 0,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "0.50",
+      "skew": "40.34",
+      "rate_min": "2.37",
+      "rate_max": "2.74"
+    },
+    "arrival": {
+      "cv": "0.91",
+      "skew": "0.56",
+      "rate": "1.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 1,
+    "capacity": 47,
+    "input_type": "linear"
+  }
+]

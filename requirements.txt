@@ -1,1 +1,9 @@
-git+https://github.com/ipu69/pyqumo.git@7386b93
+git+https://github.com/ipu69/pyqumo.git@70a9bcd
+
+click~=8.1.7
+pydantic~=2.3.0
+numpy~=1.25.2
+pytest~=7.4.0
+setuptools~=59.6.0
+scipy~=1.11.2
+tqdm~=4.66.1

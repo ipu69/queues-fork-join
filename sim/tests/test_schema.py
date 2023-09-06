@@ -7,7 +7,7 @@ from ..sim.schema import InputModel, LinearServicesInputModel, \
 def test_implicit_input_model_deserialization__linear():
     inp_json = """{
         "input_type": "linear",
-        "service": {
+        "services": {
             "cv": 0.5,
             "skew": 14.0,
             "rate_min": 0.2,
@@ -29,10 +29,10 @@ def test_implicit_input_model_deserialization__linear():
     assert obj is not None
     assert isinstance(obj, LinearServicesInputModel)
     assert obj.input_type == "linear"
-    assert obj.service.cv == Decimal('0.5')
-    assert obj.service.skew == Decimal('14.0')
-    assert obj.service.rate_min == Decimal('0.2')
-    assert obj.service.rate_max == Decimal('0.8')
+    assert obj.services.cv == Decimal('0.5')
+    assert obj.services.skew == Decimal('14.0')
+    assert obj.services.rate_min == Decimal('0.2')
+    assert obj.services.rate_max == Decimal('0.8')
     assert obj.arrival.cv == Decimal('1.5')
     assert obj.arrival.skew == Decimal('0.5')
     assert obj.arrival.rate == Decimal('1.1')
@@ -44,7 +44,7 @@ def test_implicit_input_model_deserialization__linear():
 def test_implicit_input_model_deserialization__fraction():
     inp_json = """{
         "input_type": "fraction",
-        "service": {
+        "services": {
             "cv": 0.9,
             "skew": 42.0,
             "rate_min": 0.3,
@@ -67,10 +67,10 @@ def test_implicit_input_model_deserialization__fraction():
     assert obj is not None
     assert isinstance(obj, FractionServiceInputModel)
     assert obj.input_type == "fraction"
-    assert obj.service.cv == Decimal('0.9')
-    assert obj.service.skew == Decimal('42.0')
-    assert obj.service.rate_min == Decimal('0.3')
-    assert obj.service.rate_max == Decimal('0.7')
+    assert obj.services.cv == Decimal('0.9')
+    assert obj.services.skew == Decimal('42.0')
+    assert obj.services.rate_min == Decimal('0.3')
+    assert obj.services.rate_max == Decimal('0.7')
     assert obj.arrival.cv == Decimal('1.6')
     assert obj.arrival.skew == Decimal('0.4')
     assert obj.arrival.rate == Decimal('1.2')
