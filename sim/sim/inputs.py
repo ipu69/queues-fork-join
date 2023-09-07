@@ -109,7 +109,7 @@ def generate_random_implicit_inputs(
         cv_f = float(cv)
         if cv_f <= 1.001:
             if 0.999 <= cv_f <= 1.001:
-                min_skew = Decimal(2)
+                min_skew = 2
             else:
                 min_skew = 1/cv_f * (cv_f - 1/cv_f)
         else:
@@ -147,18 +147,21 @@ def generate_random_implicit_inputs(
         # --------------------------
         # (2) Generate service props
         # --------------------------
+        num_servers = random_int(params.num_servers)
         service_rate_min = random_float(params.service_rate)
-        service_rate_max = random_float(params.service_rate)
-        if service_rate_min > service_rate_max:
-            service_rate_min, service_rate_max = \
-                service_rate_max, service_rate_min
+        if num_servers > 1:
+            service_rate_max = random_float(params.service_rate)
+            if service_rate_min > service_rate_max:
+                service_rate_min, service_rate_max = \
+                    service_rate_max, service_rate_min
+        else:
+            service_rate_max = service_rate_min
         service_cv = random_float(params.service_cv)
         service_skew = random_skew(service_cv, params.service_skew_max)
 
         # ---------------------------
         # (3) Generate the rest props
         # ---------------------------
-        num_servers = random_int(params.num_servers)
         capacity = random_int(params.capacity)
 
         model_args = dict(

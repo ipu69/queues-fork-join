@@ -195,6 +195,9 @@ class IOModel(BaseModel):
     out: OutputModel
 
 
+IOModelsList = RootModel[list[IOModel]]
+
+
 class RandomInputBounds(BaseModel):
     num_servers: tuple[int, int] | int = (1, 100)
     arrival_rate: tuple[float, float] | float = (0.1, 1.0)

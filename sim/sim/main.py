@@ -1,9 +1,12 @@
+import os
+from multiprocessing import Pool
 from pathlib import PurePath
 
 import click
 from tabulate import tabulate
 from pydantic import TypeAdapter
 import json
+from tqdm import tqdm
 
 from pyqumo.simulations.forkjoin.sandbox.model import simulate_forkjoin
 import numpy as np
@@ -17,50 +20,105 @@ def cli():
     pass
 
 
-@cli.command
-def simulate():
-    inp_json = """{
-        "input_type": "linear",
-        "services": {
-            "cv": 0.5,
-            "skew": 14.0,
-            "rate_min": 0.2,
-            "rate_max": 0.8
-        },
-        "arrival": {
-            "cv": 0.8,
-            "skew": 3,
-            "rate": 1.0,
-            "lag": 0.1
-        },
-        "num_servers": 7,
-        "capacity": 42
-    }"""
-    inp = TypeAdapter(schema.InputModel).validate_json(inp_json)
-    sim_args, fitted_props = inputs.build_input(inp, max_packets=100_000)
-    results = simulate_forkjoin(
-        arrival=sim_args.arrival,
-        services=sim_args.services,
-        capacities=sim_args.capacities,
-        max_packets=sim_args.max_packets
-    )
-    out = schema.OutputModel.from_sim_results(results)
+AnyInputModel = schema.InputModel | schema.ExplicitInputModel
+
+
+def _run_simulation(
+        args: tuple[
+              list[AnyInputModel] | AnyInputModel,  # input model
+              int,  # max_packets
+              int,  # num_workers
+        ]
+):
+    inp, max_packets, num_workers = args
+    if isinstance(inp, list):
+        all_inputs = [
+            (inp_item, max_packets, num_workers)
+            for inp_item in inp
+        ]
+        output_data = []
+        with Pool(processes=num_workers) as pool:
+            iterable = tqdm(pool.imap(_run_simulation, all_inputs),
+                            total=len(inp))
+            for result in iterable:
+                output_data.append(result)
+        return output_data
+
+    sim_args, fitted_props = inputs.build_input(inp, max_packets=max_packets)
+    try:
+        result = simulate_forkjoin(
+            arrival=sim_args.arrival,
+            services=sim_args.services,
+            capacities=sim_args.capacities,
+            max_packets=sim_args.max_packets
+        )
+    except Exception as ex:
+        print(f"[ERROR] failed to run simulation for args: "
+              f"{json.dumps(inp.model_dump())}")
+        return None
+
+    out = schema.OutputModel.from_sim_results(result)
     io_model = schema.IOModel(
         inp=inp,
         out=out,
         meta=schema.Metadata(fitted=fitted_props)
     )
-    print(json.dumps(io_model.model_dump(), indent=4, default=str))
+    return io_model
 
 
 @cli.command
 @click.option('-o', '--out', type=click.Path(), default=None)
-@click.option('-t', '--type',  'input_type', help="Type of inputs",
+@click.option("--pretty", is_flag=True, default=False,
+              help="Write indented JSON")
+@click.option('-j', '--num-workers', type=int, default=0,
+              help="Number of workers, by default - number of available cores")
+@click.option('-n', '--num-packets', type=int, default=500_000,
+              help="Number of packets to simulate", show_default=True)
+@click.argument('input_file', nargs=-1, type=click.Path(exists=True))
+def simulate(input_file, num_packets, num_workers, pretty, out):
+    # (1) Load data from input files
+    inp_json = []
+    for file_name in input_file:
+        with open(file_name) as f:
+            file_json = json.load(f)
+            if not isinstance(file_json, list):
+                inp_json.append(file_json)
+            else:
+                inp_json.extend(file_json)
+
+    # (2) Build input models from the JSON read
+    inp_models = [
+        TypeAdapter(schema.InputModel).validate_python(json_data)
+        for json_data in inp_json
+    ]
+
+    # (3) Configure and run simulations
+    if num_workers <= 0:
+        num_workers = os.cpu_count()
+    io_models = _run_simulation((inp_models, num_packets, num_workers))
+
+    # (4) Build and print/write results
+    io_models_list_model = schema.IOModelsList(io_models)
+    dump_kwargs = {}
+    if pretty:
+        dump_kwargs.update({'indent': 2})
+    answer = io_models_list_model.model_dump_json(**dump_kwargs)
+    if out is None:
+        print(answer)
+    else:
+        with open(out, 'w') as f:
+            f.write(answer)
+
+
+@cli.command
+@click.option('-o', '--out', type=click.Path(), default=None)
+@click.option('-t', '--type', 'input_type', help="Type of inputs",
               type=click.Choice([schema.InputType.LINEAR,
                                  schema.InputType.FRACTION]),
               default=schema.InputType.LINEAR.value, show_default=True)
-@click.option("--pretty", is_flag=True, default=False, help="Write indented JSON")
-@click.option("-P", "--stdout", default=False,
+@click.option("--pretty", is_flag=True, default=False,
+              help="Write indented JSON")
+@click.option("-P", "--stdout", is_flag=True, default=False,
               help="Rather writing to a file, print result to stdout")
 @click.option("-S", "--silent", is_flag=True, default=False,
               help="Don't print progress or any additional runtime info")
