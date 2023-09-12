@@ -1,0 +1,1 @@
+{"services":{"cv":"0.50","skew":"34.58","rate_min":"2.44","rate_max":"2.67"},"arrival":{"cv":"3.92","skew":"5.89","rate":"1.00","lag":"0.52"},"num_servers":3,"capacity":44,"input_type":"linear"}
