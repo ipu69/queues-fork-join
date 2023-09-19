@@ -41,7 +41,8 @@ def _run_simulation(
             iterable = tqdm(pool.imap(_run_simulation, all_inputs),
                             total=len(inp))
             for result in iterable:
-                output_data.append(result)
+                if result is not None:
+                    output_data.append(result)
         return output_data
 
     sim_args, fitted_props = inputs.build_input(inp, max_packets=max_packets)
@@ -54,7 +55,7 @@ def _run_simulation(
         )
     except Exception as ex:
         print(f"[ERROR] failed to run simulation for args: "
-              f"{json.dumps(inp.model_dump())}")
+              f"{inp.__str__()}")
         return None
 
     out = schema.OutputModel.from_sim_results(result)
@@ -84,7 +85,7 @@ def simulate(input_file, num_packets, num_workers, pretty, out):
             if not isinstance(file_json, list):
                 inp_json.append(file_json)
             else:
-                inp_json.extend(file_json)
+                inp_json.extend(file_json) 
 
     # (2) Build input models from the JSON read
     inp_models = [
