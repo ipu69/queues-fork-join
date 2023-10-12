@@ -85,7 +85,7 @@ def simulate(input_file, num_packets, num_workers, pretty, out):
             if not isinstance(file_json, list):
                 inp_json.append(file_json)
             else:
-                inp_json.extend(file_json) 
+                inp_json.extend(file_json)
 
     # (2) Build input models from the JSON read
     inp_models = [
