@@ -23,10 +23,6 @@ def resolve_matrix_square_equation(a: np.ndarray, b: np.ndarray, c: np.ndarray, 
 def find_r_matrix(q_2: np.ndarray, q_1: np.ndarray, q_0: np.ndarray) -> np.ndarray:
     g_matrix = find_g_matrix(q_2, q_1, q_0)
 
-    print('g matrix')
-
-    print(g_matrix)
-
     r_matrix = np.dot(
         q_2,
         np.linalg.inv((-q_1 - np.dot(q_2, g_matrix)))

@@ -11,7 +11,7 @@ from pyqumo import Distribution, PhaseType, get_noncentral_m2, \
 from pyqumo.algorithms.fitting import fit_acph2, fit_mern2, fit_map_horvath05, \
     optimize_lag1
 
-import schema
+from sim import schema
 
 MAX_ORDER_FOR_LAGS = 20
 

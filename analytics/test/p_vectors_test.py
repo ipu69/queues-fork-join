@@ -1,3 +1,5 @@
+import time
+
 import numpy as np
 
 import analytics.test_suit as test_suit
@@ -16,6 +18,7 @@ from analytics.solution.loss_probability import calculate_loss_prob
 
 
 def test():
+    cur_time = time.time()
     d_matrices = test_suit.d_matrices
     ph = test_suit.ph
     buffer_size = test_suit.buffer_size
@@ -153,3 +156,4 @@ def test():
     print(np.dot(solution[0], q_0_1) + np.dot(solution[1], q_1 + np.dot(r, q_0)))
     print(1 - (np.sum(p_vectors[0]) + np.sum(np.dot(p_vectors[1], np.linalg.inv(np.eye(r.shape[0]) - r)))))
 
+    print(f'Execution takes {time.time() - cur_time}')
