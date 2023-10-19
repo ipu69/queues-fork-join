@@ -8,5 +8,5 @@
   "service_cv": [0.5, 5],
   "service_skew_max": 100.0,
   "capacity": [0, 20],
-  "num_slow_servers": [0, 24]
+  "num_slow_servers": [0, 32]
 }
