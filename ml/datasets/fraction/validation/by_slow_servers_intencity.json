@@ -1,0 +1,182 @@
+[
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "10.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "20.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "30.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "40.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "50.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "60.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "70.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "80.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "90.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  },
+  {
+    "services": {
+      "cv": "4.25",
+      "skew": "23.98",
+      "rate_min": "100.00",
+      "rate_max": "100.00"
+    },
+    "arrival": {
+      "cv": "0.92",
+      "skew": "79.41",
+      "rate": "50.00",
+      "lag": "-0.00"
+    },
+    "num_servers": 10,
+    "capacity": 10,
+    "input_type": "fraction",
+    "num_slow_servers": 5
+  }
+]

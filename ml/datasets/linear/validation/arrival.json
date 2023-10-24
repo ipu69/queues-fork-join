@@ -1,0 +1,172 @@
+[
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "20.00",
+      "rate_max": "20.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "20.00",
+      "rate_max": "20.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "10.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "20.00",
+      "rate_max": "20.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "15.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "20.00",
+      "rate_max": "20.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "20.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "10.00",
+      "rate_max": "20.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "25.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "10.00",
+      "rate_max": "10.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "30.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "10.00",
+      "rate_max": "10.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "35.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "10.00",
+      "rate_max": "10.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "40.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "10.00",
+      "rate_max": "10.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "45.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "10.00",
+      "rate_max": "10.00"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "50.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  }
+]

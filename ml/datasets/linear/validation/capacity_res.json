@@ -1,0 +1,524 @@
+[
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 2,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 0.9579735254790163,
+        "std": 1.0746970540803367,
+        "index": 0
+      },
+      "min_system_size": {
+        "avg": 0.9401375123380655,
+        "std": 1.064267265231272,
+        "index": 3
+      },
+      "max_busy_rate": {
+        "avg": 0.5322230878016132,
+        "std": 0.49896059224404643,
+        "index": 0
+      },
+      "min_busy_rate": {
+        "avg": 0.5271956567020502,
+        "std": 0.4992598484322009,
+        "index": 3
+      },
+      "loss_prob": 0.46976681860091163,
+      "response_time": {
+        "avg": 0.37513596660348336,
+        "std": 0.9003093161839696,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 4,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 1.6238598609789334,
+        "std": 1.7057811921819694,
+        "index": 0
+      },
+      "min_system_size": {
+        "avg": 1.6011941016604048,
+        "std": 1.693680356715912,
+        "index": 2
+      },
+      "max_busy_rate": {
+        "avg": 0.6151083131215273,
+        "std": 0.48656970338309846,
+        "index": 0
+      },
+      "min_busy_rate": {
+        "avg": 0.6105579429969392,
+        "std": 0.48762377017561964,
+        "index": 2
+      },
+      "loss_prob": 0.3884611076888615,
+      "response_time": {
+        "avg": 0.5535531158694746,
+        "std": 1.2318828753115867,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 6,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 2.322604621166177,
+        "std": 2.331530199134504,
+        "index": 3
+      },
+      "min_system_size": {
+        "avg": 2.268313401195858,
+        "std": 2.3098694156898483,
+        "index": 0
+      },
+      "max_busy_rate": {
+        "avg": 0.6701691161661756,
+        "std": 0.4701515414238505,
+        "index": 3
+      },
+      "min_busy_rate": {
+        "avg": 0.6610238217251339,
+        "std": 0.47336173148769883,
+        "index": 0
+      },
+      "loss_prob": 0.33517802213626563,
+      "response_time": {
+        "avg": 0.712209466488495,
+        "std": 1.3774918685435464,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 8,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 3.008556036387455,
+        "std": 2.966512644363723,
+        "index": 1
+      },
+      "min_system_size": {
+        "avg": 2.927191685067422,
+        "std": 2.9326222418495087,
+        "index": 3
+      },
+      "max_busy_rate": {
+        "avg": 0.6971996469800869,
+        "std": 0.45946958466358695,
+        "index": 1
+      },
+      "min_busy_rate": {
+        "avg": 0.6878779327375086,
+        "std": 0.46335934477495994,
+        "index": 3
+      },
+      "loss_prob": 0.300941416945505,
+      "response_time": {
+        "avg": 0.8783706123288519,
+        "std": 1.572429327837444,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 10,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 3.7242640819169988,
+        "std": 3.6010892242761283,
+        "index": 1
+      },
+      "min_system_size": {
+        "avg": 3.6534703098814707,
+        "std": 3.5712837889805673,
+        "index": 0
+      },
+      "max_busy_rate": {
+        "avg": 0.7206162360609022,
+        "std": 0.4486964189586543,
+        "index": 1
+      },
+      "min_busy_rate": {
+        "avg": 0.7171913674744634,
+        "std": 0.45036419695017116,
+        "index": 0
+      },
+      "loss_prob": 0.2817181978003516,
+      "response_time": {
+        "avg": 1.0465676374819635,
+        "std": 1.6937151550276088,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 12,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 4.369144457197006,
+        "std": 4.233822795930617,
+        "index": 0
+      },
+      "min_system_size": {
+        "avg": 4.321109837729074,
+        "std": 4.207620305639663,
+        "index": 3
+      },
+      "max_busy_rate": {
+        "avg": 0.7318916159084126,
+        "std": 0.44297435419150993,
+        "index": 2
+      },
+      "min_busy_rate": {
+        "avg": 0.7283069353530757,
+        "std": 0.44483248899972055,
+        "index": 1
+      },
+      "loss_prob": 0.26432434378425085,
+      "response_time": {
+        "avg": 1.2145005606713593,
+        "std": 1.82525638505393,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 14,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 5.131339575134675,
+        "std": 4.86553371054563,
+        "index": 0
+      },
+      "min_system_size": {
+        "avg": 5.000075499455814,
+        "std": 4.819789561838567,
+        "index": 2
+      },
+      "max_busy_rate": {
+        "avg": 0.7530127938235048,
+        "std": 0.43125923313202774,
+        "index": 0
+      },
+      "min_busy_rate": {
+        "avg": 0.7446834476196491,
+        "std": 0.43603900107784216,
+        "index": 1
+      },
+      "loss_prob": 0.2519970559175657,
+      "response_time": {
+        "avg": 1.373871259374609,
+        "std": 1.937844206889524,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 16,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 5.863446600999778,
+        "std": 5.544113236781683,
+        "index": 3
+      },
+      "min_system_size": {
+        "avg": 5.540865190936589,
+        "std": 5.37699972403045,
+        "index": 0
+      },
+      "max_busy_rate": {
+        "avg": 0.7615279922976651,
+        "std": 0.42614916313980067,
+        "index": 3
+      },
+      "min_busy_rate": {
+        "avg": 0.7499145376920642,
+        "std": 0.4330620323350476,
+        "index": 0
+      },
+      "loss_prob": 0.23910182562921006,
+      "response_time": {
+        "avg": 1.5346097129087053,
+        "std": 2.0856610159244076,
+        "index": null
+      }
+    }
+  },
+  {
+    "inp": {
+      "services": {
+        "cv": "2.86",
+        "skew": "61.20",
+        "rate_min": "10.00",
+        "rate_max": "10.00"
+      },
+      "arrival": {
+        "cv": "2.95",
+        "skew": "42.29",
+        "rate": "10.0",
+        "lag": "0.00"
+      },
+      "num_servers": 4,
+      "capacity": 18,
+      "input_type": "linear"
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 2.950000000000053,
+        "arrival_skew": 42.2899999999993,
+        "arrival_lag": -8.930262766303725e-17,
+        "arrival_order": 2,
+        "service_cv": 2.8599999999999905,
+        "service_skew": 61.20000000000003,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 6.56562040164858,
+        "std": 6.104577729702331,
+        "index": 0
+      },
+      "min_system_size": {
+        "avg": 6.339512857136812,
+        "std": 6.043774097104035,
+        "index": 1
+      },
+      "max_busy_rate": {
+        "avg": 0.7771667805448843,
+        "std": 0.4161473005588093,
+        "index": 0
+      },
+      "min_busy_rate": {
+        "avg": 0.7706934073143636,
+        "std": 0.42038682095962526,
+        "index": 1
+      },
+      "loss_prob": 0.22929025444916018,
+      "response_time": {
+        "avg": 1.6944097842973669,
+        "std": 2.2503365611842656,
+        "index": null
+      }
+    }
+  }
+]

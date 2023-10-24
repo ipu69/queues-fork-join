@@ -1,0 +1,121 @@
+[
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 4,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 8,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 12,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 16,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 20,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 24,
+    "capacity": 14,
+    "input_type": "linear"
+  },
+  {
+    "services": {
+      "cv": "2.86",
+      "skew": "61.20",
+      "rate_min": "29.55",
+      "rate_max": "35.28"
+    },
+    "arrival": {
+      "cv": "2.95",
+      "skew": "42.29",
+      "rate": "5.0",
+      "lag": "0.00"
+    },
+    "num_servers": 28,
+    "capacity": 14,
+    "input_type": "linear"
+  }
+]
