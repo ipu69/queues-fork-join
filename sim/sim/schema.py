@@ -83,21 +83,22 @@ class FractionServiceInputModel(BaseImplicitModel):
         if self.num_slow_servers > self.num_servers:
             raise ValueError("Expected num_slow_servers <= num_servers")
         
-        slow_service_model = ExplicitInputModel(
+        slow_service_model = ExplicitDistributionModel(
             cv=self.services.cv,
             skew=self.services.skew,
             rate=self.services.rate_min
         )
-        fast_service_model = ExplicitInputModel(
+        fast_service_model = ExplicitDistributionModel(
             cv=self.services.cv,
             skew=self.services.skew,
             rate=self.services.rate_max
         )
-        
+
         slow_services = [
             slow_service_model.model_copy() 
             for _ in range(self.num_slow_servers)
         ]
+
         fast_services = [
             fast_service_model.model_copy() 
             for _ in range(self.num_servers - self.num_slow_servers)

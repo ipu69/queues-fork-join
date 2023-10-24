@@ -69,6 +69,7 @@ def build_input(
         arrival_lag=arrival_map.lag(1),
         arrival_order=arrival_map.order,
     )
+
     if not isinstance(source, schema.ExplicitInputModel):
         fitted_props.service_cv = ph_list[0].cv
         fitted_props.service_skew = ph_list[0].skewness

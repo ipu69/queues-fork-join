@@ -1,0 +1,61 @@
+[
+  {
+    "inp": {
+      "services": {
+        "cv": "4.25",
+        "skew": "23.98",
+        "rate_min": "10.00",
+        "rate_max": "100.00"
+      },
+      "arrival": {
+        "cv": "0.92",
+        "skew": "79.41",
+        "rate": "10.00",
+        "lag": "-0.00"
+      },
+      "num_servers": 10,
+      "capacity": 20,
+      "input_type": "fraction",
+      "num_slow_servers": 5
+    },
+    "meta": {
+      "fitted": {
+        "arrival_cv": 0.9199999999993692,
+        "arrival_skew": 79.41000000001004,
+        "arrival_lag": 0.0,
+        "arrival_order": 8,
+        "service_cv": 4.250000000000001,
+        "service_skew": 23.979999999999997,
+        "service_order": 2
+      }
+    },
+    "out": {
+      "max_system_size": {
+        "avg": 4.585011477540489,
+        "std": 6.918977474144304,
+        "index": 4
+      },
+      "min_system_size": {
+        "avg": 0.10368392301864787,
+        "std": 0.6528905924585662,
+        "index": 6
+      },
+      "max_busy_rate": {
+        "avg": 0.5913650722740676,
+        "std": 0.4915815533239163,
+        "index": 4
+      },
+      "min_busy_rate": {
+        "avg": 0.05820478480617564,
+        "std": 0.23413027961338626,
+        "index": 7
+      },
+      "loss_prob": 0.41320639619188576,
+      "response_time": {
+        "avg": 2.6674919918805706,
+        "std": 3.362486787058062,
+        "index": null
+      }
+    }
+  }
+]
